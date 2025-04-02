@@ -19,7 +19,14 @@ class GiocatoreTest {
 	}
 
 	@Test
-	void testCFU() {
+	void testsetCFU() {
+		this.giocatore.setCfu(5);
+		assertEquals(5,giocatore.getCfu());
+		
+	}
+	
+	@Test
+	void testgetCFU() {
 		this.giocatore.setCfu(5);
 		assertEquals(5,giocatore.getCfu());
 		

@@ -22,13 +22,13 @@ class PartitaTest {
 	void testNuovaPartitaNON_FINITA() {
 		assertFalse(this.partita.isFinita());
 	}
-	
+	@Test
 	void testNuovaPartitaNON_FINITA_E_POI_FINITA() {
 		assertFalse(this.partita.isFinita());
 		this.partita.setFinita();
 		assertTrue(this.partita.isFinita());
 	}
-	
+	@Test
 	void testPartitaVINTA() {
 		this.partita.setStanzaCorrente(partita.getLabirinto().getStanzaVincente()); 
 		assertTrue(this.partita.vinta());

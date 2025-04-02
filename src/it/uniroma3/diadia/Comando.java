@@ -26,7 +26,7 @@ public class Comando {
 
 		// prima parola: nome del comando
 		if (scannerDiParole.hasNext())
-			this.nome = scannerDiParole.next(); 
+			this.nome = scannerDiParole.next();
 
 		// seconda parola: eventuale parametro
 		if (scannerDiParole.hasNext())

@@ -17,7 +17,7 @@ class BorsaTest {
 	void setUp() throws Exception {
 		this.giocatore = new Giocatore();
 		this.borsa = this.giocatore.getBorsa();
-	}
+}
 
 	/**
 	 * Test che verifica l'aumento di peso della borsa

@@ -19,11 +19,6 @@ class StanzaTest {
 		this.spada =  new Attrezzo ("spada", 10);
 	}
 
-//	@Test
-//	void testHasAttrezzo() {
-//		fail("Not yet implemented");
-//	}
-//	
 	@Test
 	void testHasAttrezzoStanzaVuota() {
 		assertFalse(this.stanza.hasAttrezzo("spada"));

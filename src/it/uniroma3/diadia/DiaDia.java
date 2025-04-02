@@ -47,7 +47,7 @@ public class DiaDia {
 			istruzione = this.console.leggiRiga();
 		while (!processaIstruzione(istruzione));
 
-	}   
+	}  
 
 
 	/**
@@ -174,6 +174,7 @@ public class DiaDia {
 	private void fine() {
 		this.console.mostraMessaggio("Grazie di aver giocato!");  // si desidera smettere
 	}
+	
 
 	public static void main(String[] argc) {
 		DiaDia gioco = new DiaDia();

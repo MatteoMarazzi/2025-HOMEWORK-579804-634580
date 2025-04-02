@@ -32,7 +32,5 @@ class LabirintoTest {
 
 		assertTrue(this.partita.isFinita());
 	}
-	
-	
 
 }

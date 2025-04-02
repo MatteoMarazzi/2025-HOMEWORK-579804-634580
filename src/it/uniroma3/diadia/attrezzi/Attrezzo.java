@@ -1,6 +1,8 @@
 package it.uniroma3.diadia.attrezzi;
 
-import it.uniroma3.diadia.ambienti.Stanza;
+public class Attrezzo {
+
+
 
 /**
  * Una semplice classe che modella un attrezzo.
@@ -12,8 +14,6 @@ import it.uniroma3.diadia.ambienti.Stanza;
  * @see Stanza
  * @version base
  */
-public class Attrezzo {
-
 	private String nome;
 	private int peso;
 
@@ -52,3 +52,4 @@ public class Attrezzo {
 	}
 
 }
+
