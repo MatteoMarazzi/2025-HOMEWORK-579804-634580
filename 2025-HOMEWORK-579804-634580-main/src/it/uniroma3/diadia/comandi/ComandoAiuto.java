@@ -22,5 +22,12 @@ public class ComandoAiuto implements Comando {
 		// TODO Auto-generated method stub
 
 	}
-
+	@Override
+	public String getNome() {
+		return "aiuto";
+	}
+	@Override
+	public String getParametro() {
+		return null;
+	}
 }

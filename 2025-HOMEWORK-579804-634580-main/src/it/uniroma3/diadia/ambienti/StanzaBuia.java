@@ -11,7 +11,7 @@ public class StanzaBuia extends Stanza{
 	}
 	@Override
 	public String getDescrizione() {
-		if(this.hasAttrezzo(this.attrezzoNecessario)) {
+		if(!this.hasAttrezzo(this.attrezzoNecessario)) {
 			return MEX_DEFAULT;
 		}else {
 			return super.toString();

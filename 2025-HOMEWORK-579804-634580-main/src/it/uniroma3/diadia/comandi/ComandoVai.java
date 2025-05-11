@@ -20,10 +20,12 @@ public void esegui(Partita partita) {
     Stanza prossimaStanza = null;
     if (direzione == null) {
     	this.io.mostraMessaggio("Dove vuoi andare? Devi specificare una direzione");
+    	return;
     }
     prossimaStanza = stanzaCorrente.getStanzaAdiacente(this.direzione);
     if (prossimaStanza == null) {
     	this.io.mostraMessaggio("Direzione inesistente");
+    	return;
     }
 
     partita.setStanzaCorrente(prossimaStanza);
@@ -34,5 +36,13 @@ public void esegui(Partita partita) {
 @Override
 public void setParametro(String parametro) {
 	this.direzione = parametro;
+}
+@Override
+public String getNome() {
+	return "vai";
+}
+@Override
+public String getParametro() {
+	return this.direzione;
 }
 }

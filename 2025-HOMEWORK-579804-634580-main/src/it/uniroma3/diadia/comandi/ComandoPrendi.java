@@ -36,8 +36,14 @@ public class ComandoPrendi implements Comando {
 
 	@Override
 	public void setParametro(String parametro) {
-		// TODO Auto-generated method stub
-
+		
 	}
-
+	@Override
+	public String getNome() {
+		return "prendi";
+	}
+	@Override
+	public String getParametro() {
+		return this.attrezzo;
+	}
 }

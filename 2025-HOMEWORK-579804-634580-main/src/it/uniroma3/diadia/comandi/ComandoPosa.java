@@ -34,5 +34,14 @@ public class ComandoPosa implements Comando {
 		// TODO Auto-generated method stub
 
 	}
-
+	@Override
+	public String getNome() {
+		return "posa";
+	}
+	@Override
+	public String getParametro() {
+		return this.attrezzo;
+	}
 }
+
+
