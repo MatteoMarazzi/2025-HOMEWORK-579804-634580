@@ -74,5 +74,10 @@ public class Partita {
 	}
 
 
+	public boolean giocatoreIsVivo() {
+		return isFinita();
+	}
+
+
 		
 }
