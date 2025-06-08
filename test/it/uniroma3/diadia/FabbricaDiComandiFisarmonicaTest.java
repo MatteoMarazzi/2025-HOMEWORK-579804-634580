@@ -6,11 +6,12 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 import it.uniroma3.diadia.comandi.Comando;
 import it.uniroma3.diadia.comandi.FabbricaDiComandi;
-import it.uniroma3.diadia.comandi.FabbricaDiComandiFisarmonica;
+import it.uniroma3.diadia.comandi.FabbricaDiComandiRiflessiva;
 import it.uniroma3.diadia.giocatore.Borsa;
 
 class FabbricaDiComandiFisarmonicaTest {
@@ -25,18 +26,19 @@ class FabbricaDiComandiFisarmonicaTest {
 	private Borsa borsa;
 	private String istruzione;
 	private Comando comando;
-
+	private Labirinto labirinto;
 	@BeforeEach
 	void setUp() throws Exception {
 		this.io = new IOConsole();
-		this.partita = new Partita();
+		this.labirinto = new Labirinto();
+		this.partita = new Partita(labirinto);
 		this.stanza = new Stanza("Campus One");
 		this.attrezzo = new Attrezzo("Lanterna",2);
 		this.attrezzoBorsa = new Attrezzo("Spada",3);
 		this.stanza.addAttrezzo(attrezzo);
 		this.borsa = this.partita.getGiocatore().getBorsa();
 		this.borsa.addAttrezzo(attrezzoBorsa);
-		this.factory = new FabbricaDiComandiFisarmonica();
+		this.factory = new FabbricaDiComandiRiflessiva();
 	}
 
 	@Test

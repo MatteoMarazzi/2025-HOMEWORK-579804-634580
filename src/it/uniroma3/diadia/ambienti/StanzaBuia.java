@@ -5,9 +5,9 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 public class StanzaBuia extends Stanza{
 	static final private String MEX_DEFAULT = "Qui c'è buio pesto";
 	private String attrezzoNecessario;
-	public StanzaBuia(String nome,Attrezzo attrezzoNecessario) {
+	public StanzaBuia(String nome,String attrezzoNecessario) {
 		super(nome);
-		this.attrezzoNecessario = attrezzoNecessario.getNome();
+		this.attrezzoNecessario = attrezzoNecessario;
 	}
 	@Override
 	public String getDescrizione() {

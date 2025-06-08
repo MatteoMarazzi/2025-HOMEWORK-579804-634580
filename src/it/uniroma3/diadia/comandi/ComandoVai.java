@@ -1,13 +1,13 @@
 package it.uniroma3.diadia.comandi;
 
+import it.uniroma3.diadia.Direzione;
 import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;
 
-public class ComandoVai implements Comando {
-private String direzione;
-private IO io;
-public ComandoVai(IO io,String direzione) {
+public class ComandoVai extends AbstractComando {
+private Direzione direzione;
+public ComandoVai(IO io,Direzione direzione) {
  this.direzione = direzione;
  this.io = io;
 }
@@ -33,16 +33,5 @@ public void esegui(Partita partita) {
     partita.getGiocatore().setCfu(partita.getGiocatore().getCfu() - 1);
 }
 
-@Override
-public void setParametro(String parametro) {
-	this.direzione = parametro;
-}
-@Override
-public String getNome() {
-	return "vai";
-}
-@Override
-public String getParametro() {
-	return this.direzione;
-}
+
 }

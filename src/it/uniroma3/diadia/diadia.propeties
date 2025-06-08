@@ -1,0 +1,8 @@
+# CFU iniziali del giocatore
+cfu.iniziali=20
+
+# Peso massimo che la borsa può contenere
+borsa.pesoMassimo=10
+
+# File di testo col labirinto (in classpath)
+labirinto.file=labirinto.txt

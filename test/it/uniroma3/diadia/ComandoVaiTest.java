@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.comandi.ComandoVai;
 
@@ -14,10 +15,11 @@ public class ComandoVaiTest {
 	private Stanza stanzaIniziale;
 	private Stanza stanzaNord;
 	private IO io;
+	private Labirinto labirinto;
 
 	@Before
 	public void setUp() {
-		this.partita = new Partita();
+		this.partita = new Partita(labirinto);
 		this.stanzaIniziale = new Stanza("Atrio");
 		this.stanzaNord = new Stanza("Campus One");
 		this.io = new IOConsole();

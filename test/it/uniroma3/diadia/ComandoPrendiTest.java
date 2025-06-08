@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 import it.uniroma3.diadia.comandi.ComandoPrendi;
@@ -19,9 +20,11 @@ class ComandoPrendiTest {
 	private ComandoPrendi comando;
 	private Borsa borsa;
 	private IO io;
+	private Labirinto labirinto;
 	@BeforeEach
 	public void setUp() {
-		this.partita = new Partita();
+		this.labirinto = new Labirinto();
+		this.partita = new Partita(labirinto);
 		this.stanza = new Stanza("Campus One");
 		this.attrezzo = new Attrezzo("Lanterna",3);
 		this.partita.setStanzaCorrente(stanza);

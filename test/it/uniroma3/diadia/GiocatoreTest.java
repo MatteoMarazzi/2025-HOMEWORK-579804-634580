@@ -5,16 +5,18 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import it.uniroma3.diadia.giocatore.Borsa;
+import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.giocatore.Giocatore;
 
 class GiocatoreTest {
 	private Giocatore giocatore;
 	private Partita partita;
+	private Labirinto labirinto;
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		this.partita = new Partita();
+		this.labirinto = new Labirinto();
+		this.partita = new Partita(labirinto);
 		this.giocatore = new Giocatore();
 	}
 

@@ -13,6 +13,7 @@ public interface Comando {
 	public void setParametro(String parametro);
 
 	public String getNome();
+	public void setNome(String nomeComando);
 	
 	public String getParametro(); 
 }

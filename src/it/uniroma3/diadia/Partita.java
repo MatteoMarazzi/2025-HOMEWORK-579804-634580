@@ -21,8 +21,8 @@ public class Partita {
 	private Labirinto labirinto;
 	private Giocatore giocatore;
 	
-	public Partita(){
-		this.labirinto = new Labirinto();
+	public Partita(Labirinto labirinto){
+		this.labirinto = labirinto;
 		this.giocatore = new Giocatore();
 		this.finita = false;
 		//this.cfu = CFU_INIZIALI;
@@ -32,6 +32,10 @@ public class Partita {
 
 	public void setStanzaCorrente(Stanza stanzaCorrente) {
 		this.stanzaCorrente = stanzaCorrente;
+	}
+	
+	public void setLabirinto(Labirinto labirinto) {
+		this.labirinto = labirinto;
 	}
 
 	public Stanza getStanzaCorrente() {
